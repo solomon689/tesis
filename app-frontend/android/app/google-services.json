@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "786629739060",
+    "firebase_url": "https://geoen-ff033-default-rtdb.firebaseio.com",
+    "project_id": "geoen-ff033",
+    "storage_bucket": "geoen-ff033.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786629739060:android:632d410d03098c163d4061",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786629739060-pjllpvuvuqho9dsd5fmveberihhomoo3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.ionic.starter",
+            "certificate_hash": "9ef485279187712b2e84b570cdc3a32c8093a474"
+          }
+        },
+        {
+          "client_id": "786629739060-5n8tc3nberf8cs1h2rr9lvamta5ls2af.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw4MRZR5jOoX6FBcPx7lc_yagJmZ2P0Dk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786629739060-5n8tc3nberf8cs1h2rr9lvamta5ls2af.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
