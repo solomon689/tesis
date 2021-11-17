@@ -1,9 +1,15 @@
-# tesis
-Aplicación móvil para proyecto de título
+# GEOEN
+Geoen (Geolocation Emergency Notification)  es una aplicación móvil desarrollada bajo el framework de ionic. La funcionalidad principal de esta aplicación es enviar alerta de emergencias a contactos del usuario que se encuentran monitoreando su estado mientras realiza su trayecto y así reducir el sentimiento de inseguridad que existe actualmente hoy en día al momento de andar por la calle.  
+
+###### Integrantres:  
+- María Teresa Peña  
+- Bastián Yima
 
 # Recomendacion
-Dado a problemas de compatibilidad y versiones de softwares (ionic, capacitor, android studio, entre otras) recomendamos probar la aplicación móvil a través de la apk generada.
-Para descargarla acceder al siguiente link ---> https://www.mediafire.com/file/vp2xnj6ktaubp6n/geoen.apk/file
+Dado a problemas de compatibilidad y versiones de softwares (ionic, capacitor, android studio, entre otras) recomendamos probar la aplicación móvil a través de la apk generada.  
+Para descargarla acceder al siguiente link ---> https://www.mediafire.com/file/vp2xnj6ktaubp6n/geoen.apk/file  
+
+&#x1F534; NOTA: No se recomienda probar la aplicación en dispositivos xiaomi debido a que ionic presenta ciertas incompatibilidades con su hardware, provocando fallos en ciertas funcionalidades.
 
 # Instrucciones
 Para probar la aplicación de manera local se deberán de seguir los siguientes pasos:
@@ -16,7 +22,6 @@ Para probar la aplicación de manera local se deberán de seguir los siguientes 
 4.- Ingresar el comando --> ionic build.  
 5.- Abrir carpeta Android dentro de android studio.  
 6.- Abrir la aplicación con el emulador por defecto de android studio o configurar un emulador en android studio.  
-7.- Probar.
 
 ### Backend
 
