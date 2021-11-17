@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "geoen-ff033": {
+      "hosting": {
+        "monitoreo": [
+          "geoen-ff033"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "geoen-ff033"
+  }
+}

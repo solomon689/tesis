@@ -1,0 +1,47 @@
+<app-header [isRegisterPage]="false" title="GEOEN"></app-header>
+
+<ion-content padding class="ion-padding">
+  
+  <app-map></app-map>
+
+  <form [formGroup]="timeForm" padding *ngIf="!isStarted">
+    <ion-item class="ion-margin-bottom input">
+      <ion-label class="text" position="floating">Intervalo de tiempo (.Min)<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="time" type="number"></ion-input>
+
+      <ion-text color="danger" *ngIf="timeForm.get('time').errors?.required
+                && timeForm.get('time').touched">
+        <small>Por favor ingrese un valor.</small>
+      </ion-text>
+
+      <!-- <ion-text color="danger" *ngIf="timeForm.get('time').errors?.min
+                && timeForm.get('time').touched">
+        <small>El intervalo de tiempo debe ser mínimo 10 minutos.</small>
+      </ion-text>
+
+      <ion-text color="danger" *ngIf="timeForm.get('time').errors?.max
+                && timeForm.get('time').touched">
+        <small>El intervalo de tiempo no debe superar los 60 minutos.</small>
+      </ion-text> -->
+
+  </ion-item>
+</form>
+
+<div class="ion-justify-content-center centrado">
+  <ion-button block color="primary" type="submit" [disabled]="timeForm.invalid" (click)="startTravel()" *ngIf="!isStarted">
+    Iniciar viaje
+  </ion-button>
+</div>
+
+<app-travel-options 
+                  *ngIf="isStarted"
+                  [isStarted]="isStarted" 
+                  (finishEvent)="finishTravel($event)" 
+                  [roomId]="roomId"
+                  [minutes]="minutes"
+                  [userName]="userName"
+                  [contacts]="userContacts"
+                  >
+</app-travel-options>
+
+</ion-content>

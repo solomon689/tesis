@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "geoen-ff033": {
+      "hosting": {
+        "app": [
+          "geoen-ff033"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+<ion-header class="ion-no-border">
+    <ion-img src="/assets/img/logo.png" class="logo"></ion-img>
+</ion-header>
+
+<ion-content class="ion-padding ">
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <ion-list>
+
+            <ion-item class="ion-margin-bottom">
+                <ion-label position="floating">Correo electrónico</ion-label>
+                <ion-input 
+                            type="email" 
+                            placeholder="ejemplo@gmail.com"
+                            formControlName="email"
+                >
+                </ion-input>
+
+                <div *ngIf="loginForm.get('email').errors?.required && loginForm.get('email').touched">
+                    <small class="invalid-feedback">Por favor ingrese su correo</small>
+                </div>
+
+                <div *ngIf="loginForm.get('email').errors?.pattern && loginForm.get('email').touched">
+                    <small class="invalid-feedback">Por favor ingrese un correo válido.</small>
+                </div>
+                
+            </ion-item>
+    
+            <ion-item class="ion-margin-bottom">
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input 
+                            type="password" 
+                            placeholder="********"
+                            formControlName="password"
+                >
+                </ion-input>
+
+                <div *ngIf="loginForm.get('password').errors?.required && loginForm.get('password').touched">
+                    <small class="invalid-feedback">Por favor ingrese su contraseña</small>
+                </div>
+
+                <div *ngIf="loginForm.get('password').errors?.minlength && loginForm.get('password').touched">
+                    <small class="invalid-feedback">Por favor ingrese una contraseña válida.</small>
+                </div>
+
+            </ion-item>
+    
+        </ion-list>
+        
+        <div class="flex-container ion-margin-top ion-margin-bottom">
+            <ion-button type="submit" class="ion-margin-bottom" [disabled]="!loginForm.valid">
+                Entrar
+            </ion-button>
+            <ion-button class="google-color" (click)="loginGoogle()">
+                <ion-icon slot="start" name="logo-google"></ion-icon>
+                <ion-text>
+                    Continuar con google
+                </ion-text>
+            </ion-button>
+        </div> 
+
+    </form>
+    
+    <div class="flex-container ion-margin-bottom">
+        <ion-text class="ion-text-center">
+            <a routerLink="/reset-password">Olvidé mi contraseña</a>
+        </ion-text>
+    </div>
+
+    <div class="flex-container">
+        <ion-text class="ion-text-center">
+            <h6>¿No estás registrado?</h6>
+            <a routerLink="/register">¡Presiona aquí!</a>
+        </ion-text>
+    </div>
+
+</ion-content>

@@ -1,0 +1,17 @@
+.status-box {
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px lightgray;
+    min-height: 33vh;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bg-image {
+    background-image: url('../../../assets/img/tesis.jpg');
+    background-repeat: no-repeat;
+    min-height: 33vh;
+}

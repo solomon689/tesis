@@ -1,0 +1,33 @@
+<app-status-modal
+                [minutes]="minutes" 
+                [roomId]="roomId"
+></app-status-modal>
+
+<ion-grid fixed>
+  <ion-row class="ion-justify-content-center">
+    
+    <ion-col size="12">
+      <h4 class="ion-text-center">¿Estás en problemas?</h4>
+    </ion-col>
+
+    <ion-col size="4" class="ion-text-center ion-margin-bottom">
+      <ion-button color="danger" class="emergency-button" (click)="sendAlert()">
+        <ion-icon slot="icon-only" name="alert" class="size-icon"></ion-icon>
+      </ion-button>
+    </ion-col>
+
+    <ion-col size="4" class="ion-text-center ion-margin-bottom">
+      <ion-button color="danger" class="emergency-button" (click)="sendVoiceAlert()">
+        <ion-icon slot="icon-only" name="mic" class="size-icon"></ion-icon>
+      </ion-button>
+    </ion-col>
+
+    <ion-col size="12" class="ion-text-center finish-button-margin">
+      <ion-button (click)="finishTravel()">
+        Terminar
+      </ion-button>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+

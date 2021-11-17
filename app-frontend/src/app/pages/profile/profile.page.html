@@ -1,0 +1,130 @@
+<app-header [isRegisterPage]="false" title="GEOEN"></app-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="profileForm" *ngIf="showForm; else loading">
+
+    <ion-list>
+
+      <ion-item class="ion-margin-bottom">
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input 
+                  type="text" 
+                  placeholder="Awesome Input" 
+                  class="ion-margin-top"
+                  formControlName="name"
+        ></ion-input>
+
+        <div *ngIf="profileForm.get('name').errors?.required 
+                  && profileForm.get('name').touched">
+          <ion-text color="danger">
+            <span>Por favor ingrese su nombre.</span>
+          </ion-text>
+        </div>
+
+        <div *ngIf="profileForm.get('name').errors?.pattern 
+                  && profileForm.get('name').touched">
+          <ion-text color="danger">
+            <span>Por favor ingrese un nombre válido.</span>
+          </ion-text>
+        </div>
+
+      </ion-item>
+  
+      <ion-item class="ion-margin-bottom">
+        <ion-label position="stacked">Apellido</ion-label>
+        <ion-input 
+                  type="text" 
+                  placeholder="Awesome Input" 
+                  class="ion-margin-top"
+                  formControlName="lastname"
+        ></ion-input>
+
+        <div *ngIf="profileForm.get('lastname').errors?.required 
+                  && profileForm.get('lastname').touched">
+          <ion-text color="danger">
+            <span>Por favor ingrese su apellido.</span>
+          </ion-text>
+        </div>
+
+        <div *ngIf="profileForm.get('lastname').errors?.pattern 
+                  && profileForm.get('lastname').touched">
+          <ion-text color="danger">
+            <span>Por favor ingrese un Apellido válido.</span>
+          </ion-text>
+        </div>
+
+      </ion-item>
+  
+      <ion-item class="ion-margin-bottom">
+        <ion-label position="stacked">Número de teléfono</ion-label>
+        <ion-input 
+                  type="text" 
+                  placeholder="Awesome Input" 
+                  class="ion-margin-top"
+                  formControlName="phone"
+        ></ion-input>
+
+        <div *ngIf="profileForm.get('phone').errors?.required 
+                  && profileForm.get('phone').touched">
+          <ion-text color="danger">
+            <span>Por favor ingrese su número de teléfono.</span>
+          </ion-text>
+        </div>
+
+        <div *ngIf="profileForm.get('phone').errors?.pattern 
+                  && profileForm.get('phone').touched">
+          <ion-text color="danger">
+            <span>Por favor ingrese un teléfono válido.</span>
+          </ion-text>
+        </div>
+
+      </ion-item>
+  
+      <ion-item class="ion-margin-bottom">
+        <ion-label position="stacked">Correo electrónico</ion-label>
+        <ion-input 
+                  type="email" 
+                  placeholder="Awesome Input" 
+                  class="ion-margin-top"
+                  formControlName="email"
+        ></ion-input>
+
+        <div *ngIf="profileForm.get('email').errors?.required 
+                  && profileForm.get('email').touched">
+          <ion-text color="danger">
+            <span>Por favor ingrese su correo electrónico.</span>
+          </ion-text>
+        </div>
+
+        <div *ngIf="profileForm.get('email').errors?.pattern 
+                  && profileForm.get('email').touched">
+          <ion-text color="danger">
+            <span>Por favor ingrese un correo electrónico válido.</span>
+          </ion-text>
+        </div>
+
+      </ion-item>
+  
+    </ion-list>
+
+    <div class="flex-container ion-margin-top">
+      <ion-button 
+                (click)="onUpdate()" 
+                type="submit" 
+                [disabled]="!profileForm.valid"
+      >
+        Editar datos
+      </ion-button>
+    </div>
+
+  </form>
+
+  <ng-template #loading>
+    <div class="flex-container 
+                ion-justify-content-center
+                ion-margin-top">
+        <ion-spinner name="bubbles"></ion-spinner>
+    </div>
+  </ng-template>
+
+</ion-content>

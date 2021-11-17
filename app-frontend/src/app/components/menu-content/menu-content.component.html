@@ -1,0 +1,23 @@
+  <!-- MENU DESPLEGABLE -->
+  <ion-menu side="start" [menuId]="menuId" contentId="main">
+    <ion-header>
+  
+      <ion-toolbar color="primary">
+        <ion-title>GEOEN</ion-title>
+      </ion-toolbar>
+  
+    </ion-header>
+  
+    <ion-content>
+      <ion-list>
+  
+        <ion-menu-toggle autoHide="false">
+          <ion-item (click)="disableAccount()">Inhabilitar cuenta</ion-item>
+          <ion-item (click)="logOut()">Cerrar sesión</ion-item>
+        </ion-menu-toggle>
+  
+      </ion-list>
+      
+    </ion-content>
+  
+  </ion-menu>

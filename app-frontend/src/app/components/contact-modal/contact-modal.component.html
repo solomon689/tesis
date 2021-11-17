@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-title>Registrar contacto</ion-title>
+
+    <ion-button 
+              slot="end" 
+              fill="clear" 
+              (click)="dismissModal()" 
+              class="close-btn"
+    >
+      Cerrar
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form [formGroup]="registerContactForm" (ngSubmit)="contactRegister()">
+
+    <ion-list>
+
+      <ion-item class="ion-margin-bottom">
+        <ion-label position="floating">Nombre</ion-label>
+        
+        <ion-input 
+                  type="text" 
+                  placeholder="Luis Ignacio"
+                  formControlName="name"
+        ></ion-input>
+
+        <div *ngIf="registerContactForm.get('name').errors?.required
+          && registerContactForm.get('name').touched">
+          <ion-text color="danger">
+            Por favor ingrese un nombre
+          </ion-text>
+        </div>
+
+        <div *ngIf="registerContactForm.get('name').errors?.pattern
+          && registerContactForm.get('name').touched">
+          <ion-text color="danger">
+            Por favor ingrese solamente carácteres permitidos
+          </ion-text>
+        </div>
+
+      </ion-item>
+
+      <ion-item class="ion-margin-bottom">
+        <ion-label position="floating">Número de teléfono</ion-label>
+        <ion-input
+                  type="tel" 
+                  placeholder="980758472"
+                  formControlName="phone"
+        ></ion-input>
+
+        <div *ngIf="registerContactForm.get('phone').errors?.required
+          && registerContactForm.get('phone').touched">
+          <ion-text color="danger">
+            Por favor ingrese un teléfono
+          </ion-text>
+        </div>
+
+        <div *ngIf="registerContactForm.get('phone').errors?.pattern
+          && registerContactForm.get('phone').touched">
+          <ion-text color="danger">
+            Por favor ingrese solamente números
+          </ion-text>
+        </div>
+      </ion-item>
+
+    </ion-list>
+
+    <div class="ion-text-center">
+      <ion-button type="submit" [disabled]="!registerContactForm.valid">
+        Agregar
+      </ion-button>
+    </div>
+
+  </form>
+
+</ion-content>

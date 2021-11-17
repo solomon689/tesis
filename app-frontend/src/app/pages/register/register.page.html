@@ -1,0 +1,103 @@
+<app-header [isRegisterPage]="true" title="Registro">
+
+</app-header>
+
+<ion-content class="ion-padding">
+
+  <form [formGroup]="formularioRegister">
+      
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Nombre <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="name" type="text"></ion-input>
+
+      <div *ngIf="formularioRegister.get('name').errors?.required 
+            && formularioRegister.get('name').touched">
+        <span class="invalid-feedback">
+          Por favor ingrese su nombre
+        </span>
+      </div>
+
+    </ion-item>
+    
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Apellido <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="lastname" type="text"></ion-input>
+
+      <div *ngIf="formularioRegister.get('lastname').errors?.required 
+            && formularioRegister.get('lastname').touched">
+        <span class="invalid-feedback">
+          Por favor ingrese su apellido
+        </span>
+      </div>
+
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Número de teléfono (sólo 9 digitos) <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="phone" type="tel"></ion-input>
+      
+      <div *ngIf="formularioRegister.get('phone').errors?.required 
+            && formularioRegister.get('phone').touched">
+        <span class="invalid-feedback">
+          Por favor ingrese su número de teléfono
+        </span>
+      </div>
+
+      <div *ngIf="formularioRegister.get('phone').errors?.pattern 
+            && formularioRegister.get('phone').touched">
+        <span class="invalid-feedback">
+          Por favor ingrese un número de teléfono válido (123456789)
+        </span>
+      </div>
+
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Correo electrónico <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="email" type="text"></ion-input>
+
+      <div *ngIf="formularioRegister.get('email').errors?.required 
+            && formularioRegister.get('email').touched">
+        <span class="invalid-feedback">
+          Por favor ingrese un correo electrónico
+        </span>
+      </div>
+
+      <div *ngIf="formularioRegister.get('email').errors?.pattern 
+            && formularioRegister.get('email').touched">
+        <span class="invalid-feedback">
+          Por favor ingrese un correo electrónico válido (ejemplo@gmail.com).
+        </span>
+      </div>
+
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Contraseña <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="password" type="password"></ion-input>
+
+      <div *ngIf="formularioRegister.get('password').errors?.required 
+            && formularioRegister.get('password').touched">
+        <span class="invalid-feedback">Por favor ingrese una contraseña.</span>
+      </div>
+
+      <div *ngIf="formularioRegister.get('password').errors?.minlength">
+        <span class="invalid-feedback">La contraseña debe contener al menos 8 caracteres.</span>
+      </div>
+
+    </ion-item>
+
+      <div class="ion-justify-content-center centrado">
+        <ion-button 
+                  block 
+                  color="primary" 
+                  type="submit" 
+                  (click)="onRegister()" 
+                  [disabled]="formularioRegister.invalid"
+        >
+          Registrarme
+        </ion-button>
+      </div>
+        
+  </form>
+</ion-content>

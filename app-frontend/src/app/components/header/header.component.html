@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <!-- En caso de ser la pagina de registro -->
+    <ng-container *ngIf="isRegisterPage; else normalHeader">
+      <ion-title>{{ title }}</ion-title>
+
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/login"></ion-back-button>
+      </ion-buttons>
+    </ng-container>
+
+    <!-- Header para cualquier otra página -->
+    <ng-template #normalHeader>
+      
+      <ion-title>
+        {{ title }}
+      </ion-title>
+
+      <ion-buttons slot="start" style="padding: 0; margin: 0;">
+          <div style="display: flex; align-items: center;">
+            <img src="../../../assets/img/logo-chico.png" style="width: 40px; height: 50px; margin-left: 20px;">
+          </div>
+
+      </ion-buttons>
+
+      <ion-buttons slot="end">
+          <ion-menu-button menu="geoen-menu" autoHide="false"></ion-menu-button>
+      </ion-buttons>
+
+    </ng-template>
+
+  </ion-toolbar>
+</ion-header>
