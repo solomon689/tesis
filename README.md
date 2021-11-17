@@ -1,5 +1,6 @@
 # GEOEN
-Geoen (Geolocation Emergency Notification)  es una aplicación móvil desarrollada bajo el framework de ionic. La funcionalidad principal de esta aplicación es enviar alerta de emergencias a contactos del usuario que se encuentran monitoreando su estado mientras realiza su trayecto y así reducir el sentimiento de inseguridad que existe actualmente hoy en día al momento de andar por la calle.  
+Geoen (Geolocation Emergency Notification)  es una aplicación móvil desarrollada bajo el framework de ionic.  
+La funcionalidad principal de esta aplicación es enviar alerta de emergencias a contactos del usuario que se encuentran monitoreando su estado mientras realiza su trayecto y así reducir el sentimiento de inseguridad que existe actualmente hoy en día al momento de andar por la calle.  
 
 ###### Integrantes:  
 - María Teresa Peña  
