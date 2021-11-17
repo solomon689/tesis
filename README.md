@@ -7,7 +7,7 @@ Geoen (Geolocation Emergency Notification)  es una aplicación móvil desarrolla
 
 # Recomendacion
 Dado a problemas de compatibilidad y versiones de softwares (ionic, capacitor, android studio, entre otras) recomendamos probar la aplicación móvil a través de la apk generada.  
-Para descargarla acceder al siguiente link ---> https://www.mediafire.com/file/vp2xnj6ktaubp6n/geoen.apk/file  
+Para descargar la apk acceder al siguiente link ---> https://www.mediafire.com/file/vp2xnj6ktaubp6n/geoen.apk/file  
 
 &#x1F534; NOTA: No se recomienda probar la aplicación en dispositivos xiaomi debido a que ionic presenta ciertas incompatibilidades con su hardware, provocando fallos en ciertas funcionalidades.
 
