@@ -51,7 +51,7 @@ const socketController = (socket) => {
      página de monitoreo.
     */
     socket.on('record', (payload) => {
-        const message = new message_1.default('', '', payload.record, (payload.typeOfRecord === typeOfRecord.ANSWERED) ? typeOfRecord.ANSWERED : typeOfRecord.NOT_ANSWERED);
+        const message = new message_1.default('', '', payload.record, (payload.typeOfRecord === typeOfRecord.ANSWERED) ? typeOfRecord.ANSWERED : typeOfRecord.NOT_ANSWERED, payload.hour);
         if (payload.roomId)
             socket.to(payload.roomId).emit('send-record', message.newRecord);
     });

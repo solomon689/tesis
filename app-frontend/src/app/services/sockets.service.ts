@@ -47,7 +47,8 @@ export class SocketsService {
     this.socket.emit('record', {
       roomId,
       record,
-      typeOfRecord
+      typeOfRecord,
+      hour: this.getActualTime()
     });
   }
 

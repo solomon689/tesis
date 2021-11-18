@@ -58,7 +58,8 @@ const socketController = (socket: Socket) => {
             '',
             '',
             payload.record,
-            (payload.typeOfRecord === typeOfRecord.ANSWERED) ? typeOfRecord.ANSWERED : typeOfRecord.NOT_ANSWERED
+            (payload.typeOfRecord === typeOfRecord.ANSWERED) ? typeOfRecord.ANSWERED : typeOfRecord.NOT_ANSWERED,
+            payload.hour
         );
 
         if (payload.roomId)
