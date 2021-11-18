@@ -8,7 +8,7 @@ La funcionalidad principal de esta aplicación es enviar alertas de emergencias 
 
 # Recomendacion
 Dado a problemas de compatibilidad y versiones de softwares (ionic, capacitor, android studio, entre otras) recomendamos probar la aplicación móvil a través de la apk generada.  
-Para descargar la apk acceder al siguiente link ---> https://www.mediafire.com/file/vp2xnj6ktaubp6n/geoen.apk/file  
+Para descargar la apk acceder al siguiente link ---> https://www.mediafire.com/file/ima9g7n7xd6trh0/geoen.apk/file  
 
 &#x1F534; NOTA: No se recomienda probar la aplicación en dispositivos xiaomi debido a que ionic presenta ciertas incompatibilidades con su hardware, provocando fallos en algunas de las funcionalidades.
 
